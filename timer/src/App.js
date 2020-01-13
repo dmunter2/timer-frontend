@@ -1,24 +1,24 @@
 import React, {useState} from 'react';
-
 import './App.css';
 import Timer from './components/Timer';
 
 
 function App() {
 
-  // const [time, setTime] = useState({
-  //   seconds: '00',
-  //   minutes: ''
+  const [times, setTimes] = useState([])
 
-  // })
+  const addnewTime = time => {
+    setTimes([...times, time ])
+  }
+
+
 
 
   return (
     <div className="App">
-      {/* <TimerInput  /> */}
-      <Timer  />
+      <Timer times={times} addnewTime={addnewTime}/>
+      
 
-      {/* <StartButton /> */}
 
 
     </div>

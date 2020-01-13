@@ -1,72 +1,23 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-
-function Timer() {
-
-
-
-
-
-    const calculateTimeLeft = () => {
-        const difference = +new Date("2020-01-12") - +new Date();
-        let timeLeft = {};
-
-        if (difference > 0) {
-            timeLeft = {
-                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                minutes: Math.floor((difference / 1000 / 60) % 60),
-                seconds: Math.floor((difference / 1000) % 60)
-            };
-        }
-
-        return timeLeft;
-    };
-
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+import TimerForm from './TimerForm';
+import TimeCard from './TimerCard';
 
 
 
 
-    useEffect(() => {
-        setTimeout(() => {
-            setTimeLeft(calculateTimeLeft());
-        }, 1000);
-    });
+const Timer = (props) => {
+
+
+return (
+
+    <div>
+        <TimerForm addnewTime={props.addnewTime}/>
+        <TimeCard times={props.times}/>
+    </div>
 
 
 
-
-
-    
-    const timerComponents = [];
-
-    Object.keys(timeLeft).forEach(interval => {
-        if (!timeLeft[interval]) {
-            return;
-        }
-
-        timerComponents.push(
-            <span>
-                {timeLeft[interval]} {interval}{" "}
-            </span>
-        );
-    });
-
-
-
-
-
-
-
-
-    return (
-        <div>
-            <h1>Alligator.io New Year's 2020 Countdown</h1>
-            <h2>With React Hooks!</h2>
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-        </div>
-    );
-}
+)}
 
 export default Timer;
