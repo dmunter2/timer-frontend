@@ -3,7 +3,9 @@ import Style from 'styled-components';
 
 
 
-const DIV = Style.div``
+const DIV = Style.div`
+background-color: #0b0f54;
+`
 
 const DIV2 = Style.div`
 display: flex;
@@ -14,25 +16,50 @@ align-items: center;`
 const H1 = Style.h4`
 margin-left: 1%;
 margin-right: 1%;
+color: white;
 `
 const DIV3 = Style.div``
 
 const CREATE = Style.div``
 
 const FORM = Style.form`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+height: 100px;
 
 `
 
 const INPUT = Style.input`
 width: 50px;
+border: 1px solid white;
+border-radius: 5px;
 `
 
 
 const DIV1 = Style.div``
 
-const HEADER = Style.div``
+const HEADER = Style.div`
+display: flex;
+font - family: 'Source Sans Pro', sans - serif;
+font-size: 2rem;
+font-weight: 700;
+color: #009a9a;
+
+`
 
 const BUTTON1 = Style.button``
+
+const INPUT2 = Style.input`
+width: 150px;
+`
+
+//fonts 
+//
+
+// font - family: 'Poppins', sans - serif;---- regular fonts
+
+// font - family: 'Source Sans Pro', sans - serif;
 
 
 
@@ -97,7 +124,7 @@ const CreateTimer = (props) => {
                         </DIV2>
 
                         <DIV3>
-                            <textarea type='text' placeholder='description' onChange={changeHandler} name='description' />
+                            <INPUT2 className='text-area' type='text' placeholder='Event' onChange={changeHandler} name='description' />
                         </DIV3>
 
                  

@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import Timer from './components/Timer';
+import Style from 'styled-components';
 
+const DIV = Style.div``
 
 function App() {
 
@@ -15,13 +17,13 @@ function App() {
 
 
   return (
-    <div className="App">
+    <DIV className="App">
       <Timer times={times} addnewTime={addnewTime}/>
       
 
 
 
-    </div>
+    </DIV>
   );
 }
 

@@ -21,8 +21,6 @@ const TimerFunctionality = ({year, month, day}) => {
         return(
 
             <div>
-                <h1>Alligator.io New Year's 2020 Countdown</h1>
-                <h2>With React Hooks!</h2>
                 <CalculateTimeLeft year={year} month={month} day={day}/>
             </div>
         )
