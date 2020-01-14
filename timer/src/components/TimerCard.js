@@ -3,13 +3,18 @@ import Style from 'styled-components';
 import TimerFunctionality from './TimerFunctionality';
 
 const DIV = Style.div`
+`
+const DIV1 = Style.div`
+font-size: 1.5rem;
+color: teal;
+font-weight: 700;
 
 `
-const DIV1 = Style.div``
 
 const DIV3 = Style.div`
-border: 1px solid black;
-width: 400px;
+width: 460px;
+border: 1px solid white;
+margin-bottom: 15px;
 `
 
 const TimerCard = (props) => {
@@ -21,8 +26,9 @@ const TimerCard = (props) => {
             {props.times.map((time, index) => {
                 return(
                     <DIV3 key={index}>
-                        <TimerFunctionality day={time.day} month={time.month} year={time.year}/>
                         <DIV1>{time.description}</DIV1>
+
+                        <TimerFunctionality day={time.day} month={time.month} year={time.year}/>
                     </DIV3>
                 )
             })}

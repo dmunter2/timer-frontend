@@ -1,9 +1,26 @@
 import React from 'react';
 import Style from 'styled-components';
 
-const DIV = Style.div``
-const DIV1 = Style.div``
-const H1 = Style.h3``
+const DIV = Style.div`
+display: flex;
+flex-direction: row;
+// width: 400px;
+color: white;
+justify-content: space-around;
+`
+const DIV1 = Style.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+`
+
+
+const H1 = Style.h3`
+`
+const NEW = Style.div`
+margin-right: 10px;
+`
 
 const CalculateTimeLeft = (props) => {
     const difference = +new Date(`${props.year}-${props.month}-${props.day}`) - +new Date();
@@ -28,24 +45,30 @@ const CalculateTimeLeft = (props) => {
 
 
             <DIV1>
-                {timeLeft.days}
+                <NEW>{timeLeft.days}</NEW>
                 <H1>Days</H1>
             </DIV1>
         
             <DIV1>
-                {timeLeft.hours}
+                <NEW>
+                    {timeLeft.hours}
+                </NEW>
                 <H1>Hours</H1>
 
             </DIV1>
 
             <DIV1>
-                {timeLeft.minutes}
+                <NEW>
+                    {timeLeft.minutes}
+                </NEW>
                 <H1>Minutes</H1>
 
             </DIV1>
 
             <DIV1>
-                {timeLeft.seconds}
+                <NEW>
+                    {timeLeft.seconds}
+                </NEW>
                 <H1>Seconds</H1>
 
             </DIV1>

@@ -4,7 +4,11 @@ import Style from 'styled-components';
 
 
 const DIV = Style.div`
-background-color: #0b0f54;
+// background-color: #0b0f54;
+width: 450px;
+border: 1px solid white;
+height: 250px;
+padding: .5%;
 `
 
 const DIV2 = Style.div`
@@ -18,15 +22,24 @@ margin-left: 1%;
 margin-right: 1%;
 color: white;
 `
-const DIV3 = Style.div``
+const DIV3 = Style.div`
 
-const CREATE = Style.div``
+`
+
+const CREATE = Style.div`
+margin-top: 20px;
+display: flex;
+justify-content: center;
+
+
+`
 
 const FORM = Style.form`
 display: flex;
-flex-direction: row;
-justify-content: space-around;
-height: 100px;
+flex-direction: column;
+// height: 200px;
+align-items: center;
+
 
 `
 
@@ -34,24 +47,34 @@ const INPUT = Style.input`
 width: 50px;
 border: 1px solid white;
 border-radius: 5px;
+height: 20px;
 `
 
 
-const DIV1 = Style.div``
+const DIV1 = Style.div`
+`
 
 const HEADER = Style.div`
 display: flex;
 font - family: 'Source Sans Pro', sans - serif;
-font-size: 2rem;
+font-size: 2.5rem;
 font-weight: 700;
 color: #009a9a;
 
 `
 
-const BUTTON1 = Style.button``
+const BUTTON1 = Style.button`
+width: 150px;
+background-color: teal;
+border: none;
+color: white;
+border-radius: 7px;
+height: 40px;
+`
 
 const INPUT2 = Style.input`
-width: 150px;
+width: 190px;
+height: 30px;
 `
 
 //fonts 
@@ -111,6 +134,13 @@ const CreateTimer = (props) => {
             <CREATE>
                 <FORM onSubmit={submitHandler}>
 
+
+                        <DIV3>
+                            <INPUT2 className='text-area' type='text' placeholder='Event' onChange={changeHandler} name='description' />
+                        </DIV3>
+
+
+
                         <DIV2>
 
                             <INPUT type='text' placeholder='month' onChange={changeHandler} name='month'/>
@@ -123,9 +153,6 @@ const CreateTimer = (props) => {
 
                         </DIV2>
 
-                        <DIV3>
-                            <INPUT2 className='text-area' type='text' placeholder='Event' onChange={changeHandler} name='description' />
-                        </DIV3>
 
                  
                         <BUTTON1 type='submit'>Create Event</BUTTON1>
