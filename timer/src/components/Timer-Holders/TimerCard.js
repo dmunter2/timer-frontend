@@ -6,16 +6,16 @@ const DIV = Style.div`
 
 `
 const DIV1 = Style.div`
-font-size: 1.5rem;
-color: teal;
+font-size: 2rem;
+color: #4285F4;
 font-weight: 700;
 
 `
 
 const DIV3 = Style.div`
 width: 420px;
-border: 1px solid white;
 margin-bottom: 15px;
+border-bottom: 2px solid gray;
 `
 
 const TimerCard = (props) => {

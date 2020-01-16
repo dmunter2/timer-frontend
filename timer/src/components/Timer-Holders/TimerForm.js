@@ -6,7 +6,7 @@ import xout from './xout.png'
 
 const DIV = Style.div`
 width: 450px;
-height: 400px;
+height: 470px;
 padding: .5%;
 background-color: #E4E4E2;
 `
@@ -42,12 +42,19 @@ const DIV3 = Style.div`
 `
 
 const CREATE = Style.div`
-margin-top: 20px;
+// margin-top: 40px;
 display: flex;
 justify-content: center;
 
 
 `
+
+const RANDOM = Style.div`
+height: 20px;
+position: relative;
+
+`
+
 
 const FORM = Style.form`
 display: flex;
@@ -95,6 +102,8 @@ padding: 0;
 `
 
 const POPUP = Style.div`
+// z-index: -
+margin: 0;
 
 `
 const H5 = Style.h5``
@@ -167,9 +176,8 @@ const CreateTimer = (props) => {
 
         <DIV>
 
-            <POPUP className={popup}>
-                <H5>EventAdded</H5>
-            </POPUP>
+         
+
 
 
 
@@ -177,6 +185,8 @@ const CreateTimer = (props) => {
             <CREATE>
                 <FORM onSubmit={submitHandler}>
 
+
+                  
 
                         <DIV3>
                             <INPUT2 className='text-area' type='text' placeholder='Event' onChange={changeHandler} name='description' />
@@ -196,15 +206,21 @@ const CreateTimer = (props) => {
 
                         </DIV2>
 
-                        <DIV4 className={display}>
-                            <H4>Please Enter a future date</H4>
-                            <img alt='x' src={xout} onClick={hideDisplay} className='delete-photo'/>
-
-                        </DIV4>
+                       
 
 
                  
                         <BUTTON1 type='submit'>Create Event</BUTTON1>
+
+                        <DIV4 className={display}>
+                            <H4>Please Enter a future date</H4>
+                            <img alt='x' src={xout} onClick={hideDisplay} className='delete-photo' />
+
+                        </DIV4>
+
+                    <POPUP className={popup}>
+                        <H5>EventAdded</H5>
+                    </POPUP>
 
 
                 </FORM>

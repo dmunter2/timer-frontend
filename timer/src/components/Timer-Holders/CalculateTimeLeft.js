@@ -17,9 +17,12 @@ justify-content: space-between;
 
 
 const H1 = Style.h3`
+color: black;
 `
-const NEW = Style.div`
+const NEW = Style.h4`
+font-size: 1.3rem;
 margin-right: 10px;
+color: black;
 `
 
 const CalculateTimeLeft = (props) => {
