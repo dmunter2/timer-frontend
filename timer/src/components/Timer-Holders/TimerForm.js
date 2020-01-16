@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import Style from 'styled-components';
+import xout from './xout.png'
 
 
 
 const DIV = Style.div`
-// background-color: #0b0f54;
 width: 450px;
-border: 1px solid white;
-height: 250px;
+height: 400px;
 padding: .5%;
+background-color: #E4E4E2;
 `
 
 const DIV2 = Style.div`
@@ -21,7 +21,22 @@ const H1 = Style.h4`
 margin-left: 1%;
 margin-right: 1%;
 color: white;
+font-size: 1.5rem;
 `
+const H4 = Style.h4`
+color: black;
+margin: 0;
+font-weight: 400;
+margin-left: 10px;
+
+
+
+`
+const DIV4 = Style.div`
+
+`
+
+
 const DIV3 = Style.div`
 
 `
@@ -37,55 +52,52 @@ justify-content: center;
 const FORM = Style.form`
 display: flex;
 flex-direction: column;
-// height: 200px;
+justify-content: center;
 align-items: center;
+margin-top: 45px;
 
 
 `
 
 const INPUT = Style.input`
-width: 50px;
+width: 70px;
 border: 1px solid white;
 border-radius: 5px;
-height: 20px;
+height: 25px;
 `
 
 
 const DIV1 = Style.div`
 `
 
-const HEADER = Style.div`
-display: flex;
-font - family: 'Source Sans Pro', sans - serif;
-font-size: 2.5rem;
-font-weight: 700;
-color: #009a9a;
-
-`
 
 const BUTTON1 = Style.button`
-width: 150px;
-background-color: teal;
+width: 300px;
+height: 50px;
+font-size: 1rem;
+
+background-color: #0064D2;
 border: none;
 color: white;
 border-radius: 7px;
-height: 40px;
+margin-bottom:15px;
+border: 2px solid #0064D2;
+// margin-left: 4px;
 `
 
 const INPUT2 = Style.input`
-width: 190px;
-height: 30px;
+width: 300px;
+height: 50px;
+border-radius: 7px;
+border: none;
+padding: 0;
+
 `
 
-//fonts 
-//
+const POPUP = Style.div`
 
-// font - family: 'Poppins', sans - serif;---- regular fonts
-
-// font - family: 'Source Sans Pro', sans - serif;
-
-
-
+`
+const H5 = Style.h5``
 
 const CreateTimer = (props) => {
 
@@ -96,16 +108,43 @@ const CreateTimer = (props) => {
         description: ''
     })
 
+    const [display, setDisplay] = useState('no-display')
+
+    const [popup, setPopup] = useState('no-show')
 
     const submitHandler = e => {
         e.preventDefault()
-        let newTime = {
-            ...time, 
-            id: Date.now()
-        }
-        props.addnewTime(newTime)
 
+        //defining the date the user entered
+        let day = Number(time.day)
+        let month = Number(time.month)
+        let year = Number(time.year)
+
+        let customerDate = +new Date(`${year}-${month}-${day}`)
+        let myCurrentDate = Date.now()
+
+        if (customerDate > myCurrentDate) {
+            let newTime = {
+                ...time,
+                id: Date.now()
+            }
+
+            props.addnewTime(newTime)
+
+            setPopup('show')
+            setTimeout(function(){
+                setPopup('no-show')
+            }, 2000)
+
+
+        } else {
+            setDisplay('display')
+        }
     }
+
+
+
+
 
     const changeHandler = e => {
         e.preventDefault();
@@ -117,6 +156,10 @@ const CreateTimer = (props) => {
         
     }
 
+    const hideDisplay = e => {
+        e.preventDefault();
+        setDisplay('no-display')
+    }
 
 
 
@@ -124,9 +167,9 @@ const CreateTimer = (props) => {
 
         <DIV>
 
-            <HEADER>
-                <DIV1>Countdown</DIV1>
-            </HEADER>
+            <POPUP className={popup}>
+                <H5>EventAdded</H5>
+            </POPUP>
 
 
 
@@ -152,6 +195,12 @@ const CreateTimer = (props) => {
                            
 
                         </DIV2>
+
+                        <DIV4 className={display}>
+                            <H4>Please Enter a future date</H4>
+                            <img alt='x' src={xout} onClick={hideDisplay} className='delete-photo'/>
+
+                        </DIV4>
 
 
                  

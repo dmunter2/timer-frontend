@@ -25,11 +25,13 @@ margin-right: 10px;
 const CalculateTimeLeft = (props) => {
     const difference = +new Date(`${props.year}-${props.month}-${props.day}`) - +new Date();
 
-    
+    // console.log(difference);
+    // console.log(+new Date(`${props.year}-${props.month}-${props.day}`))
     let timeLeft = {};
 
     if (difference > 0) {
         timeLeft = {
+            // years: Math.floor((difference / 1000 * 60 * 60 * 365))
             days: Math.floor(difference / (1000 * 60 * 60 * 24) % 365),
             hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
             minutes: Math.floor((difference / 1000 / 60) % 60),

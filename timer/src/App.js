@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
-import Timer from './components/Timer';
+import Timer from './components/Timer-Holders/Timer';
 import Style from 'styled-components';
+import Header from './components/Header'
+
+
+
 
 const DIV = Style.div`
-background-color: #000052;
+// background-color: #000052;
 height: 100%;
 
 height: 1000px;
-padding: 1%;
 `
 
 function App() {
@@ -23,7 +26,12 @@ function App() {
 
 
   return (
-    <DIV className="App">
+
+
+    <DIV>
+      <Header />
+
+
       <Timer times={times} addnewTime={addnewTime}/>
       
 
