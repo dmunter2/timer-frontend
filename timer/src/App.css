@@ -80,10 +80,15 @@ justify-content: space-between;
 .show{
   width: 250px;
   height: 40px;
-  background-color: lightblue;
-  color: gray;
+  background-color: white;
+  color: black;
   display: flex;
   align-items: center;
+  border: 2px solid black;
   margin: auto;
   justify-content: center;
+}
+
+.text-area{
+  font-size: 1rem;
 }
