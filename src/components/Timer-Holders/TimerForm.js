@@ -85,6 +85,7 @@ border: 1px solid white;
 border-radius: 5px;
 height: 25px;
 border: 1px solid white;
+box-shadow: none;
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
@@ -122,6 +123,8 @@ width: 300px;
 height: 50px;
 border-radius: 7px;
 border: 1px solid white;
+box-shadow: none;
+
 padding: 0;
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
