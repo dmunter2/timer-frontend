@@ -12,8 +12,7 @@ display: flex;
 justify-content: space-around;
 flex-direction: row;
 flex-wrap:wrap;
-@media(max - width: 800px) {
-}
+
 
 
 
@@ -23,6 +22,14 @@ const DIV1 = Style.div`
 margin: 1%;
 
 margin-top: -80px;
+
+@media(max-width: 500px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
 `
 
 const DIV2 = Style.div`
@@ -38,9 +45,11 @@ background-color: #E4E4E2;
 display: flex;
 justify-content: center;
 
-@media(max-width: 900px) {
-height: 100%;
+@media(max-width: 500px) {
 overflow-y: hidden;
+margin-left: 0;
+margin-right: 0;
+width: 100%;
 
 }
 

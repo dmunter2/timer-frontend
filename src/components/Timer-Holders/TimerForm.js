@@ -13,6 +13,7 @@ margin-bottom: 150px;
 
 @media(max-width: 500px) {
 height: 340px;
+width: 100%;
 
 }
 
@@ -210,10 +211,6 @@ const CreateTimer = (props) => {
         <DIV>
 
          
-
-
-
-
 
             <CREATE>
                 <FORM onSubmit={submitHandler}>
