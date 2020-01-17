@@ -84,6 +84,8 @@ width: 70px;
 border: 1px solid white;
 border-radius: 5px;
 height: 25px;
+border: 1px solid white;
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
   select,
@@ -119,7 +121,7 @@ const INPUT2 = Style.input`
 width: 300px;
 height: 50px;
 border-radius: 7px;
-border: none;
+border: 1px solid white;
 padding: 0;
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
