@@ -39,7 +39,8 @@ display: flex;
 justify-content: center;
 
 @media(max-width: 900px) {
-height: 500px;
+height: 100%;
+overflow-y: hidden;
 
 }
 

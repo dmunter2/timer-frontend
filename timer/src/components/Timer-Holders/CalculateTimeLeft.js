@@ -4,16 +4,28 @@ import Style from 'styled-components';
 const DIV = Style.div`
 display: flex;
 flex-direction: row;
-// width: 400px;
 margin-top: 10px;
 color: white;
 justify-content: space-around;
+
+
+@media(max-width: 500px) {
+// border: 1px solid blue;
+
+}
+
+
+
 `
 const DIVSECONDS = Style.div`
 display: flex;
 flex-direction: row;
+
+
 align-items: center;
 justify-content: space-between;
+
+
 
 background-color: #0064D2;
 
@@ -26,6 +38,8 @@ justify-content: center
 const DIV1YEAR = Style.div`
 display: flex;
 flex-direction: row;
+
+
 align-items: center;
 justify-content: space-between;
 background-color: #0064D2;
@@ -40,6 +54,8 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+
+
 background-color: #0064D2;
 width: 170px;
 display: flex;
@@ -51,6 +67,9 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+
+
+
 background-color: #0064D2;
 
 width: 70px;
@@ -64,6 +83,8 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+
+
 width: 90px;
 background-color: #222;
 
@@ -99,6 +120,8 @@ color: white;
 
 
 const NEWDIV = Style.div`
+
+
 display: flex;
 flex-direction: row;
 justify-content: space-between;
