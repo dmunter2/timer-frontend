@@ -6,9 +6,17 @@ import xout from './xout.png'
 
 const DIV = Style.div`
 width: 450px;
-height: 470px;
+height: 400px;
 padding: .5%;
 background-color: #E4E4E2;
+margin-bottom: 150px;
+
+@media(max-width: 500px) {
+height: 340px;
+
+}
+
+
 `
 
 const DIV2 = Style.div`
@@ -35,6 +43,9 @@ margin-left: 10px;
 const DIV4 = Style.div`
 
 `
+
+
+
 
 
 const DIV3 = Style.div`
@@ -65,6 +76,7 @@ margin-top: 45px;
 
 
 `
+
 
 const INPUT = Style.input`
 width: 70px;
@@ -102,11 +114,13 @@ padding: 0;
 `
 
 const POPUP = Style.div`
-// z-index: -
-margin: 0;
+margin-top: 15px;
 
 `
 const H5 = Style.h5``
+
+
+
 
 const CreateTimer = (props) => {
 
@@ -143,7 +157,7 @@ const CreateTimer = (props) => {
             setPopup('show')
             setTimeout(function(){
                 setPopup('no-show')
-            }, 2000)
+            }, 1000)
 
 
         } else {

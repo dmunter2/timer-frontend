@@ -6,11 +6,9 @@ import Header from './components/Header'
 
 
 
-
 const DIV = Style.div`
 // background-color: #000052;
 height: 100%;
-
 height: 1000px;
 `
 

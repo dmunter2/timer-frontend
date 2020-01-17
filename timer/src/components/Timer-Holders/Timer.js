@@ -11,23 +11,40 @@ const DIV = Style.div`
 display: flex;
 justify-content: space-around;
 flex-direction: row;
-height: 700px;
+flex-wrap:wrap;
+@media(max - width: 800px) {
+}
+
+
+
 `
 
 const DIV1 = Style.div`
+margin: 1%;
+
 margin-top: -80px;
 `
 
 const DIV2 = Style.div`
 overflow-y: scroll
 width: 450px;
-height: 900px;
-border: 2px solid #E4E4E2
+height: 700px;
+border: 2px solid #E4E4E2;
+margin: 1%;
+
 margin-top: -80px;
 background-color: #E4E4E2;
 
 display: flex;
 justify-content: center;
+
+@media(max-width: 900px) {
+height: 100%;
+overflow-y: hidden;
+
+}
+
+
 `
 
 
