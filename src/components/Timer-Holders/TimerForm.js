@@ -83,6 +83,16 @@ width: 70px;
 border: 1px solid white;
 border-radius: 5px;
 height: 25px;
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+
 `
 
 
@@ -110,6 +120,15 @@ height: 50px;
 border-radius: 7px;
 border: none;
 padding: 0;
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
 
 `
 
