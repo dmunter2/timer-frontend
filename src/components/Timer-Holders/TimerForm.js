@@ -85,6 +85,7 @@ border: 1px solid white;
 border-radius: 5px;
 height: 25px;
 border: 1px solid white;
+box-shadow: none;
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
@@ -122,6 +123,8 @@ width: 300px;
 height: 50px;
 border-radius: 7px;
 border: 1px solid white;
+box-shadow: none;
+
 padding: 0;
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
@@ -221,18 +224,18 @@ const CreateTimer = (props) => {
                   
 
                         <DIV3>
-                            <INPUT2 className='text-area' type='text' placeholder='Event' onChange={changeHandler} name='description' />
+                        <INPUT2 className='text-area' type='text' placeholder='Event' className='no-focus' onChange={changeHandler} name='description' />
                         </DIV3>
 
 
 
                         <DIV2>
 
-                            <INPUT type='text' placeholder='month' onChange={changeHandler} name='month'/>
+                        <INPUT type='text' placeholder='month' onChange={changeHandler} className='no-focus' name='month'/>
                             <H1>/</H1>
-                            <INPUT type='text' placeholder='day' onChange={changeHandler} name='day'/>
+                            <INPUT type='text' placeholder='day' onChange={changeHandler} className='no-focus' name='day'/>
                             <H1>/</H1>
-                            <INPUT type='text' placeholder='year' onChange={changeHandler} name='year'/>
+                        <INPUT type='text' placeholder='year' onChange={changeHandler} className='no-focus' name='year'/>
 
                            
 
